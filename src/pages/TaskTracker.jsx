@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TaskForm from '../components/taskForm/TaskForm';
-import TaskList from '../components/TaskList';
+import TaskList from '../components/taskList/TaskList';
 import '../App.css';
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
   }, [])
 
   return (
-    <div className='taskList-container'>
+    <div className='task-tracker-container'>
       <div className='title-info-container'>
         <h1>Task Tracker</h1>
         <p>Argentina Programa - UTN</p>

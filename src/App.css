@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-.taskList-container{
+.task-tracker-container{
     width: 50%;
     height: 100%;
     margin:0 auto;
@@ -31,7 +31,7 @@
 }
 
 @media (max-width: 700px) {
-    .taskList-container{
+    .task-tracker-container{
         width: 90%;
     }
 }
