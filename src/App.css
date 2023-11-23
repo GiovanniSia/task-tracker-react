@@ -29,3 +29,10 @@
 .title-info-container p{
     font-size: 20px;
 }
+
+@media (max-width: 700px) {
+    .taskList-container{
+        width: 90%;
+    }
+}
+  
