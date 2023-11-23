@@ -1,3 +1,13 @@
-:root {
-  margin: 0 auto;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root{
+  height: 100vh;
+  min-width: 100%;
+  min-width: 100%;
+  display: flex;
+  background-color: #E4E3E3;
 }

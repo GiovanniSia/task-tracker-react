@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import TaskForm from '../components/TaskForm';
+import TaskForm from '../components/taskForm/TaskForm';
 import TaskList from '../components/TaskList';
+import '../App.css';
 
 const App = () => {
   const [tasks, setTasks] = useState([{
@@ -9,10 +10,14 @@ const App = () => {
     isCompleted:false,
   }]);
 
+  const handleTaskAdded = (task) =>{
+    setTasks(tasks.push(task));
+  }
+
   return (
-    <div>
-      <h1>Aplicación de Lista de Tareas</h1>
-      <TaskForm />
+    <div className='taskList-container'>
+      <h1>Task Tracker</h1>
+      <TaskForm handleTaskAdded={handleTaskAdded}/>
       <TaskList tasks={tasks} />
     </div>
   );

@@ -5,9 +5,7 @@ import TaskTracker from './pages/TaskTracker'
 const App = () => {
 
   return (
-    <>
-      <TaskTracker />
-    </>
+    <TaskTracker />
   );
 };
 
