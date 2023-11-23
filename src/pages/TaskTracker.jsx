@@ -4,20 +4,26 @@ import TaskList from '../components/TaskList';
 import '../App.css';
 
 const App = () => {
-  const [tasks, setTasks] = useState([{
-    id:"",
-    name:"",
-    isCompleted:false,
-  }]);
+  const [tasks, setTasks] = useState([]);
 
-  const handleTaskAdded = (task) =>{
-    setTasks(tasks.push(task));
+  const handleTaskAdded = (task) => {
+    tasks.push(task)
+    setTasks([...tasks]);
+    localStorage.setItem('tasks', JSON.stringify(tasks))
   }
+
+  useEffect(() => {
+    //si existen tareas guardadas, se cargan
+    if(localStorage.getItem('tasks')!==null){
+      let tasksSaved = JSON.parse(localStorage.getItem('tasks'));
+      setTasks(tasksSaved)
+    }
+  }, [])
 
   return (
     <div className='taskList-container'>
       <h1>Task Tracker</h1>
-      <TaskForm handleTaskAdded={handleTaskAdded}/>
+      <TaskForm handleTaskAdded={handleTaskAdded} />
       <TaskList tasks={tasks} />
     </div>
   );

@@ -16,6 +16,7 @@ const TaskForm = ({handleTaskAdded}) => {
       name:inputText,
       isCompleted:false,
     }
+    setInputText('');
     return handleTaskAdded(task);
   }
 

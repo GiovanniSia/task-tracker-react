@@ -30,3 +30,7 @@
     color:#fff;
     border:none;
 }
+
+.task-form-container__btn:hover{
+    background-color: rgb(93, 179, 61);
+}
