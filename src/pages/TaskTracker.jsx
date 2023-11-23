@@ -22,7 +22,11 @@ const App = () => {
 
   return (
     <div className='taskList-container'>
-      <h1>Task Tracker</h1>
+      <div className='title-info-container'>
+        <h1>Task Tracker</h1>
+        <p>Argentina Programa - UTN</p>
+
+      </div>
       <TaskForm handleTaskAdded={handleTaskAdded} />
       <TaskList tasks={tasks} />
     </div>

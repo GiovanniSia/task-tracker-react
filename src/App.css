@@ -11,11 +11,21 @@
     align-content: center;
 }
 
-.taskList-container h1{
+.title-info-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.title-info-container h1,.title-info-container p{
     width: 100%;
     height: auto;
     text-align: center;
     font-size: 90px;
-    margin: 10px 0;
+    margin: auto;
     font-family: 'Righteous', sans-serif;
+}
+
+.title-info-container p{
+    font-size: 20px;
 }
