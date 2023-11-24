@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 .task-tracker-container{
-    width: 50%;
+    width: 55%;
     height: 100%;
     margin:0 auto;
+    padding-right: 10px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
