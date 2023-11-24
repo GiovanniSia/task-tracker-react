@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: column;
     margin: 10px 0;
+    height: 20%;
 }
 
 .title-info-container h1,.title-info-container p{
@@ -31,9 +32,25 @@
     font-size: 20px;
 }
 
-@media (max-width: 700px) {
+
+@media screen and (max-width: 1000px) and (min-width: 780px) {
     .task-tracker-container{
-        width: 90%;
+        width: 70%;
+    }
+    .title-info-container h1{
+        font-size: 60px;
     }
 }
-  
+@media screen and (max-width: 780px) {
+    .task-tracker-container{
+        width: 100%;
+    }
+
+    .title-info-container h1{
+        font-size: 50px;
+    }
+    .title-info-container p{
+        font-size: 15px;
+    }
+
+}
