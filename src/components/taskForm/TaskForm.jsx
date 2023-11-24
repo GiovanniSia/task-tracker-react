@@ -12,7 +12,7 @@ const TaskForm = ({handleTaskAdded}) => {
   const handleAddTask = (e) => {
     e.preventDefault();
     if(inputText===''){
-      alert('Debe escribir un título para la tarea');
+      alert('You must write a title for the assignment.');
       return;
     }
     let task = {

@@ -1,0 +1,49 @@
+.task {
+    list-style: none;
+    border-radius: 5px;
+    border: 2px solid #000;
+    background: #38394D;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.input-checkbox {
+    cursor: pointer;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    width: 10%;
+}
+
+.task .text {
+    margin: 4px 10px;
+    width: 80%;
+}
+
+.task .text.checked{
+    text-decoration: line-through
+}
+
+.task button {
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-left: auto;
+    width: 10%;
+}
+
+.task button img {
+    display: block;
+    margin: auto;
+}
+
+.task button :hover {
+    cursor: pointer;
+    background-color: #4f505e;
+    padding: 5px;
+    border-radius: 5px;
+}

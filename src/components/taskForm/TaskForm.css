@@ -1,13 +1,14 @@
 .task-form-container{
-    width: 80%;
+    width: 100%;
     display: flex;
-    margin:0 auto;
+    margin: 0 auto;
+    max-width: 514px;
 }
 
 .task-form-container__input{
-    width: 75%;
+    width: 85%;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 10px;
     font-size: 1.2em;
     border:2px solid #F0F4F7;
 
@@ -32,7 +33,7 @@
     color:#fff;
     border:none;
     display: flex;
-    align-items: center; /* Centrado vertical */
+    align-items: center;
     justify-content: center;
 }
 

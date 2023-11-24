@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-.taskList-container{
-    width: 50%;
+.task-tracker-container{
+    width: 55%;
     height: 100%;
     margin:0 auto;
+    padding-right: 10px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -29,3 +30,10 @@
 .title-info-container p{
     font-size: 20px;
 }
+
+@media (max-width: 700px) {
+    .task-tracker-container{
+        width: 90%;
+    }
+}
+  
