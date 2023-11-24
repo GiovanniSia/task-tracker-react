@@ -13,15 +13,19 @@
 .input-checkbox {
     cursor: pointer;
     background-color: #fff;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border: 2px solid #000;
     width: 10%;
 }
 
-.task p {
+.task .text {
     margin: 4px 10px;
     width: 80%;
+}
+
+.task .text.checked{
+    text-decoration: line-through
 }
 
 .task button {
