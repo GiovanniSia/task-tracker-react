@@ -12,6 +12,8 @@ const App = () => {
     localStorage.setItem('tasks', JSON.stringify(tasks))
   }
 
+  
+
   useEffect(() => {
     //si existen tareas guardadas, se cargan
     if(localStorage.getItem('tasks')!==null){
@@ -27,7 +29,7 @@ const App = () => {
         <p>Argentina Programa - UTN</p>
       </div>
       <TaskForm handleTaskAdded={handleTaskAdded} />
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} setTasks={setTasks}/>
     </div>
   );
 };

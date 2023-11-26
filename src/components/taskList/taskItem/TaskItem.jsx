@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import './TaskItem.css';
 import trashIcon from  '../../../assets/trash.svg';
 
-const TaskItem = ({task}) => {
+const TaskItem = ({task, handleTaskRemove}) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
   };
+
+  
 
   return (
     <li className='task'>
@@ -18,7 +20,7 @@ const TaskItem = ({task}) => {
         checked={isChecked}
         ></input>
       <p className={`text ${isChecked ? 'checked':''}`}>{task.name}</p>
-      <button><img src={trashIcon} alt="Deleted" /></button>
+      <button onClick={() => handleTaskRemove(task)}><img src={trashIcon} alt="Deleted" /></button>
     </li>
   );
 };
