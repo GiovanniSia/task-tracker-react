@@ -12,9 +12,9 @@ const TaskList = ({tasks,setTasks}) => {
   return (    
     <div className='task-list-container'>
       <ul className='task-list-items'>
-        {tasks.map((task) => (
+        {tasks.map((task,index) => (
           <TaskItem
-            task={task} handleTaskRemove={handleTaskRemove}
+            key={index} task={task} handleTaskRemove={handleTaskRemove}
           />
         ))}
       </ul>
