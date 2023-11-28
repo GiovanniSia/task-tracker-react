@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import './TaskItem.css';
 import trashIcon from  '../../../assets/trash.svg';
 
-const TaskItem = ({task, handleTaskRemove}) => {
-  const [isChecked, setIsChecked] = useState(false);
+const TaskItem = ({task, handleTaskRemove, handleTaskChecked}) => {
+  const [isChecked, setIsChecked] = useState(task.isCompleted);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
+    return handleTaskChecked(task.id);
   };
-
-  
 
   return (
     <li className='task'>

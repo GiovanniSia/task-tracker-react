@@ -9,6 +9,15 @@ const TaskForm = ({handleTaskAdded}) => {
     setInputText(value);
   }
 
+  const getLastId = ()=>{
+    let tasksSaved = JSON.parse(localStorage.getItem('tasks'));
+    if(tasksSaved!==null && tasksSaved.length>0){
+      return tasksSaved[tasksSaved.length-1].id;
+    }else{
+      return 0;
+    }
+  }
+
   const handleAddTask = (e) => {
     e.preventDefault();
     if(inputText===''){
@@ -16,14 +25,13 @@ const TaskForm = ({handleTaskAdded}) => {
       return;
     }
     let task = {
-      id:"",
+      id:getLastId()+1,
       name:inputText,
       isCompleted:false,
     }
     setInputText('');
     return handleTaskAdded(task);
   }
-
 
   return (
     <div className='task-form-container'>
